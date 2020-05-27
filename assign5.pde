@@ -577,10 +577,10 @@ boolean isHit(float ax, float ay, float aw, float ah, float bx, float by, float 
 }
 
 String convertFramesToTimeString(int frames){  // Requirement #4
-
-  String min = nf(frames / 3600 , 2);
-  String ssec = nf(((frames - int(min) * 3600) / 60) , 2);
-    println(frames / 3600);
+  int m = floor(frames / 3600);
+  String min = nf( m, 2);
+  String ssec = nf((m * 3600) / 60) % 60, 2);
+  println((m * 3600) / 60);
   return  min+":"+ssec;
 }
 
