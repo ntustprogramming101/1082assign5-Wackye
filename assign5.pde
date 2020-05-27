@@ -580,7 +580,7 @@ String convertFramesToTimeString(int frames){  // Requirement #4
 
   String min = nf(frames / 3600 , 2);
   String ssec = nf(((frames - int(min) * 3600) / 60) , 2);
-    println();
+    println(frames);
   return  min+":"+ssec;
 }
 
